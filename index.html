@@ -1,0 +1,93 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>DO YOU LOVE ME?</h1>
+  <br>
+    <button class="yes" onclick="window.open('https://www.youtube.com/watch?v=8T7WQrcyE9s')">YES</button>
+    <button class="no" onclick="changeButton()" ondblclick="window.open('https://www.youtube.com/watch?v=8T7WQrcyE9s')"> NO </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROPOSAL</title>
+    <style>
+
+        *{
+          background-image: url(d645a985-fa92-438d-8bbb-817064c1acda.jpg);
+        }
+
+        h1{
+          display: inline-block;
+          margin-left: 500px;
+          margin-top: 350px;
+        }
+        
+        .yes{
+          padding: 10px;
+          background-color: pink;
+          margin-left: 620px;
+        }
+
+        #movingButton {
+          position: absolute;
+          margin-top: 367px;
+          margin-left: 640px;
+            background-color: pink;
+            left: 50px;
+            top: 50px;
+            padding: 10px;
+        }
+
+        @media (max-width: 600px) {
+
+          h1{
+            margin-left: 150px;
+          }
+          .yes{
+            margin-left: 260px;
+          }
+
+          #movingButton{
+            margin-left: 280px;
+          }
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1> DO YOU LOVE ME? </h1>
+    <br>
+    <button class="yes" onclick="window.open('https://www.youtube.com/watch?v=N2cPyl83tkQ')"> YES</button>
+    <button id="movingButton">NO</button>
+
+    <script>
+        const button = document.getElementById("movingButton");
+
+        button.addEventListener("click", () => {
+            // Generate random positions
+            const newLeft = Math.random() * 200;
+            const newTop = Math.random() * 100;
+
+            // Apply new positions
+            button.style.left = `${newLeft}px`;
+            button.style.top = `${newTop}px`;
+        });
+    </script>
+</body>
+</html>
